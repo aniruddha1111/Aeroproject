@@ -1,6 +1,6 @@
 import base64
-from Cryptodome.Cipher import AES
-from Cryptodome.Protocol.KDF import PBKDF2
+from Crypto.Cipher import AES
+from Crypto.Protocol.KDF import PBKDF2
 import os, sys
 from resources.dev import config
 # from logging_config import logger
@@ -27,13 +27,15 @@ def get_private_key():
     key32 = kdf[:32]
     return key32
 
-
 def encrypt(raw):
     raw = pad(raw)
     cipher = AES.new(get_private_key(), AES.MODE_CBC, iv.encode('utf-8'))
     return base64.b64encode(cipher.encrypt(raw))
 
-
 def decrypt(enc):
+    padded_enc = enc + '=' * (-len(enc) % 4)
+    decoded_enc = base64.b64decode(padded_enc)
+    # cipher = AES.new(get_private_key(), AES.MODE_CBC, iv.encode('utf-8'))
     cipher = AES.new(get_private_key(), AES.MODE_CBC, iv.encode('utf-8'))
-    return unpad(cipher.decrypt(base64.b64decode(enc))).decode('utf8')
+    decrypted_data = unpad(cipher.decrypt(decoded_enc), AES.block_size).decode('utf-8')
+    return decrypted_data

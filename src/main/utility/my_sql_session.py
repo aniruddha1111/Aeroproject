@@ -1,11 +1,12 @@
 import mysql.connector
+import psycopg2
 
 def get_mysql_connection():
-    connection = mysql.connector.connect(
+    connection = psycopg2.connect(
         host="localhost",
-        user="root",
-        password="password",
-        database="manish"
+        user="postgres",
+        password="Vishnu*1998",
+        database="itversity_retail_db"
     )
     return connection
 

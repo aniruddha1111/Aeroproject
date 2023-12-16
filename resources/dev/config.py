@@ -5,8 +5,8 @@ iv = "youtube_encyptyo"
 salt = "youtube_AesEncryption"
 
 #AWS Access And Secret key
-aws_access_key = "your_encrypted_access_key"
-aws_secret_key = "your_encrypted_secret_key"
+aws_access_key = "AKIA3M73MF62K662LJ4Y"
+aws_secret_key = "90DNBTwyj3HdRfYbHp1qITMrSAN2wCV94ua2WV5H"
 bucket_name = "youtube-project-testing"
 s3_customer_datamart_directory = "customer_data_mart"
 s3_sales_datamart_directory = "sales_data_mart"
@@ -41,8 +41,8 @@ mandatory_columns = ["customer_id","store_id","product_name","sales_date","sales
 
 
 # File Download location
-local_directory = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\file_from_s3\\"
-customer_data_mart_local_file = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\customer_data_mart\\"
-sales_team_data_mart_local_file = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\sales_team_data_mart\\"
-sales_team_data_mart_partitioned_local_file = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\sales_partition_data\\"
-error_folder_path_local = "C:\\Users\\nikita\\Documents\\data_engineering\\spark_data\\error_files\\"
+local_directory = "C:\\Youtubeproject\\file_from_s3\\"
+customer_data_mart_local_file = "C:\\Youtubeproject\\customer_data_mart\\"
+sales_team_data_mart_local_file = "C:\\Youtubeproject\\sales_team_data_mart\\"
+sales_team_data_mart_partitioned_local_file = "C:\\Youtubeproject\\spark_data\\sales_partition_data\\"
+error_folder_path_local = "C:\\Youtubeproject\\error_files\\"
