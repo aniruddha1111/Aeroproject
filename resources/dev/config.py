@@ -5,8 +5,8 @@ iv = "youtube_encyptyo"
 salt = "youtube_AesEncryption"
 
 #AWS Access And Secret key
-aws_access_key = "AKIA3M73MF62K662LJ4Y"
-aws_secret_key = "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"
+aws_access_key = ""
+aws_secret_key = ""
 bucket_name = "youtube-project-testing"
 s3_customer_datamart_directory = "customer_data_mart"
 s3_sales_datamart_directory = "sales_data_mart"
